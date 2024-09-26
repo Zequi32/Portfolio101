@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work</title>
+  <link href="tailwind.css" rel="stylesheet"> <!-- Ensure this path is correct -->
+  <link href="styles.css" rel="stylesheet"> <!-- Ensure this path is correct -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a; /* Dark background for the whole page */
+      color: #ffffff; /* Light text color for contrast */
+    }
+
+    header, footer, nav {
+      background-color: #1e1e1e; /* Slightly lighter dark color for headers, footers, and nav */
+      border-bottom: 1px solid #333; /* Adds a border under the header */
+    }
+
+    footer {
+      border-top: 1px solid #333; /* Adds a border above the footer */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto; /* Ensures images are responsive */
+    }
+
+    /* Example Grid System */
+    .folder-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid for folders */
+      gap: 1rem; /* Space between grid items */
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid for images */
+      gap: 1rem; /* Space between grid items */
+    }
+
+    /* Navigation styles */
+    nav a {
+      text-decoration: none; /* Removes underline from links */
+      color: #ffffff; /* Sets link color to white */
+    }
+
+    nav a:hover {
+      text-decoration: underline; /* Adds underline on hover for better user interaction */
+      color: #bbbbbb; /* Changes color on hover */
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9); /* Dark background with opacity */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .modal-content, #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0);}
+      to {transform: scale(1);}
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #caption {
+      text-align: center;
+      color: #f1f1f1;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    .download-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .download-link a {
+      background-color: #008CBA; /* Blue background */
+      color: white; /* White text */
+      padding: 10px 20px; /* Some padding */
+      text-align: center; /* Center the text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Make the link a block element */
+      font-size: 16px; /* Increase font size */
+    }
+
+    .download-link a:hover {
+      background-color: #005f5f; /* Darker background on hover */
+    }
+
+    /* Ensure full size images are centered and responsive */
+    .full-size-img {
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-md">
+    <div class="text-lg font-semibold">
+      <a href="index.html" class="text-gray-200">NOMAD</a>
+    </div>
+    <div class="space-x-4">
+      <a href="work.html" class="text-gray-200">Work</a>
+      <a href="contact.html" class="text-gray-200">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-20 bg-gray-800">
+    <h1 class="text-4xl font-bold mb-4">My Work</h1>
+    <p class="text-lg text-gray-400">Mid-Season CEO Tournament SiB pictures.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6">
+    <section class="my-12">
+      <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 image-grid">
+        <!-- Dynamic Project Images -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-center">
+    <p class="text-gray-400">&copy; 2024 Ezequiel Quintero. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to dynamically load images
+    const folderPath = 'img/folder1/'; // Update this path as needed
+    const images = [
+      'SIB1.png',
+      'SIB2.jpg',
+      'SIBFAM.jpg',
+      'SIBFAM2.jpg',
+      'SIBFAM3.jpg',
+      'SIBFAM4.jpg',
+      // Add more image filenames here
+    ];
+
+    const gridContainer = document.querySelector('.image-grid');
+    images.forEach(image => {
+      const div = document.createElement('div');
+      div.classList.add('relative', 'cursor-pointer');
+      div.innerHTML = `
+        <img src="${folderPath}${image}" alt="Project Image" class="w-full h-64 object-cover" onclick="openModal('${folderPath}${image}')">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <div class="text-center">
+            <h3 class="text-white text-xl font-bold">Project Title</h3>
+            <p class="text-gray-300">Photography</p>
+            <p class="text-gray-300">2024</p>
+          </div>
+        </div>
+      `;
+      gridContainer.appendChild(div);
+    });
+
+    function openModal(imageSrc) {
+      const modal = document.createElement('div');
+      modal.classList.add('modal');
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img src="${imageSrc}" alt="Full Size Image" class="modal-image">
+          <div class="download-link">
+            <a href="${imageSrc}" download>Download Image</a>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      const modal = document.querySelector('.modal');
+      if (modal) {
+        modal.remove();
+      }
+    }
+  </script>
+
+</body>
+</html>

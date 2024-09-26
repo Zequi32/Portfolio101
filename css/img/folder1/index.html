@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link href="tailwind.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <header class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-md">
+        <h1 class="text-gray-200 text-3xl font-bold">NOMADGRAPH</h1>
+        <nav>
+            <a href="index.html" class="text-gray-200 mx-2">Home</a>
+            <a href="work.html" class="text-gray-200 mx-2">Work</a>
+            <a href="contact.html" class="text-gray-200 mx-2">Contact</a>
+        </nav>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+        <h2 class="text-4xl font-bold text-center mb-6">Nomad Photography Portfolio</h2>
+        <p class="text-lg text-center mb-12">Explore my photography work and feel free to contact me for collaborations.</p>
+        
+        <section>
+            <h2 class="text-3xl font-bold mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative cursor-pointer" onclick="window.location.href='css/img/folder1/work.html'">
+                    <img src="SIB1.jpg" alt="Project Image 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center">
+                            <h3 class="text-white text-xl font-bold">SIB</h3>
+                            <p class="text-gray-300">Photography</p>
+                            <p class="text-gray-300">2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer" onclick="window.location.href='css/img/folder1/work.html'">
+                    <img src="css/img/folder1/image2.png" alt="Project Image 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center">
+                            <h3 class="text-white text-xl font-bold">Project Title 2</h3>
+                            <p class="text-gray-300">Photography</p>
+                            <p class="text-gray-300">2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer" onclick="window.location.href='css/img/folder2/work.html'">
+                    <img src="css/img/folder2/image3.png" alt="Project Image 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center">
+                            <h3 class="text-white text-xl font-bold">Project Title 3</h3>
+                            <p class="text-gray-300">Photography</p>
+                            <p class="text-gray-300">2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer" onclick="window.location.href='css/img/folder2/work.html'">
+                    <img src="css/img/folder2/image4.png" alt="Project Image 4" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center">
+                            <h3 class="text-white text-xl font-bold">Project Title 4</h3>
+                            <p class="text-gray-300">Photography</p>
+                            <p class="text-gray-300">2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-6 bg-gray-800 text-center">
+        <p class="text-gray-400">&copy; 2024 Ezequiel Quintero. All rights reserved.</p>
+    </footer>
+</body>
+</html>
