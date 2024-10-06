@@ -6,17 +6,70 @@
     <title>Photography Portfolio - Home</title>
     <link href="css/tailwind.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* CSS for Sticky Footer and Black-and-White Theme */
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #000000; /* Pure Black Background */
+            color: #ffffff; /* White Text */
+        }
+
+        header, footer {
+            background-color: #1a1a1a; /* Dark Gray for header and footer */
+        }
+
+        nav a {
+            color: #ffffff; /* White Text for Navigation Links */
+        }
+
+        nav a:hover {
+            color: #b3b3b3; /* Light Gray on Hover */
+        }
+
+        main {
+            flex: 1;
+        }
+
+        a {
+            color: #ffffff; /* White Text for Links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #b3b3b3; /* Light Gray Hover Effect for Links */
+        }
+
+        /* Button Styling for Black and White Theme */
+        .btn {
+            background-color: #ffffff; /* White Button Background */
+            color: #000000; /* Black Text for Button */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b3b3b3; /* Light Gray Hover */
+            color: #000000; /* Black Text remains */
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body>
 
     <!-- Navigation -->
     <header class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-md">
-        <h1 class="text-gray-200 text-3xl font-bold"><a href="index.html">NOMADGRAPH</a></h1>
+        <h1 class="text-gray-200 text-3xl font-bold"><a href="index.html" class="hover:text-gray-400">NOMADGRAPH</a></h1>
         <nav class="space-x-4">
-            <a href="index.html" class="text-gray-200 hover:text-gray-400">Home</a>
-            <a href="about.html" class="text-gray-200 hover:text-gray-400">About</a>
-            <a href="work.html" class="text-gray-200 hover:text-gray-400">Projects</a>
-            <a href="contact.html" class="text-gray-200 hover:text-gray-400">Contact</a>
+            <a href="index.html" class="hover:text-gray-400">Home</a>
+            <a href="about.html" class="hover:text-gray-400">About</a>
+            <a href="work.html" class="hover:text-gray-400">Projects</a>
+            <a href="contact.html" class="hover:text-gray-400">Contact</a>
         </nav>
     </header>
 
@@ -26,7 +79,7 @@
         <p class="text-lg text-center mb-12">Explore my photography work, read about me, and feel free to contact me for collaborations.</p>
 
         <section class="text-center">
-            <a href="work.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Projects</a>
+            <a href="work.html" class="btn">View Projects</a>
         </section>
     </main>
 
