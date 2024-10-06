@@ -7,47 +7,49 @@
     <link href="css/tailwind.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <style>
-        /* CSS for Sticky Footer and White Background with Black Text */
         html, body {
             height: 100%;
+            background-color: #f4f4f4; /* Soft light gray background */
+            color: #333333; /* Dark gray text for readability */
         }
 
         body {
             display: flex;
             flex-direction: column;
-            background-color: #ffffff; /* White Background */
-            color: #000000; /* Black Text */
         }
 
         header, footer {
-            background-color: #f1f1f1; /* Light Gray for header and footer */
+            background-color: #e0e0e0; /* Light gray for header and footer */
         }
 
         nav a {
-            color: #000000; /* Black Text for Navigation Links */
+            color: #333333; /* Dark gray text for navigation */
+            padding: 10px;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #555555; /* Darker Gray on Hover */
+            color: #555555; /* Lighter gray hover effect for links */
         }
 
         main {
             flex: 1;
+            text-align: center;
         }
 
         a {
-            color: #000000; /* Black Text for Links */
+            color: #333333; /* Dark gray text for links */
             text-decoration: none;
         }
 
         a:hover {
-            color: #555555; /* Darker Gray Hover Effect for Links */
+            color: #555555; /* Lighter gray hover effect */
         }
 
-        /* Button Styling for White Background Theme */
+        /* Button styling */
         .btn {
-            background-color: #000000; /* Black Button Background */
-            color: #ffffff; /* White Text for Button */
+            background-color: #d4d4d4; /* Light gray background */
+            color: #333333; /* Dark gray text */
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -55,8 +57,8 @@
         }
 
         .btn:hover {
-            background-color: #555555; /* Darker Gray Hover */
-            color: #ffffff; /* White Text remains */
+            background-color: #bbbbbb; /* Slightly darker gray on hover */
+            color: #000000; /* Black text on hover */
         }
     </style>
 </head>
@@ -78,7 +80,7 @@
         <h2 class="text-4xl font-bold text-center mb-6">Welcome to Nomadgraph Photography Portfolio</h2>
         <p class="text-lg text-center mb-12">Explore my photography work, read about me, and feel free to contact me for collaborations.</p>
 
-        <section class="text-center">
+        <section>
             <a href="work.html" class="btn">View Projects</a>
         </section>
     </main>
