@@ -7,7 +7,7 @@
     <link href="css/tailwind.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <style>
-        /* CSS for Sticky Footer and Black-and-White Theme */
+        /* CSS for Sticky Footer and White Background with Black Text */
         html, body {
             height: 100%;
         }
@@ -15,20 +15,20 @@
         body {
             display: flex;
             flex-direction: column;
-            background-color: #000000; /* Pure Black Background */
-            color: #ffffff; /* White Text */
+            background-color: #ffffff; /* White Background */
+            color: #000000; /* Black Text */
         }
 
         header, footer {
-            background-color: #1a1a1a; /* Dark Gray for header and footer */
+            background-color: #f1f1f1; /* Light Gray for header and footer */
         }
 
         nav a {
-            color: #ffffff; /* White Text for Navigation Links */
+            color: #000000; /* Black Text for Navigation Links */
         }
 
         nav a:hover {
-            color: #b3b3b3; /* Light Gray on Hover */
+            color: #555555; /* Darker Gray on Hover */
         }
 
         main {
@@ -36,18 +36,18 @@
         }
 
         a {
-            color: #ffffff; /* White Text for Links */
+            color: #000000; /* Black Text for Links */
             text-decoration: none;
         }
 
         a:hover {
-            color: #b3b3b3; /* Light Gray Hover Effect for Links */
+            color: #555555; /* Darker Gray Hover Effect for Links */
         }
 
-        /* Button Styling for Black and White Theme */
+        /* Button Styling for White Background Theme */
         .btn {
-            background-color: #ffffff; /* White Button Background */
-            color: #000000; /* Black Text for Button */
+            background-color: #000000; /* Black Button Background */
+            color: #ffffff; /* White Text for Button */
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -55,21 +55,21 @@
         }
 
         .btn:hover {
-            background-color: #b3b3b3; /* Light Gray Hover */
-            color: #000000; /* Black Text remains */
+            background-color: #555555; /* Darker Gray Hover */
+            color: #ffffff; /* White Text remains */
         }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <header class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-md">
-        <h1 class="text-gray-200 text-3xl font-bold"><a href="index.html" class="hover:text-gray-400">NOMADGRAPH</a></h1>
+    <header class="flex justify-between items-center py-4 px-6 bg-gray-200 shadow-md">
+        <h1 class="text-3xl font-bold"><a href="index.html" class="hover:text-gray-500">NOMADGRAPH</a></h1>
         <nav class="space-x-4">
-            <a href="index.html" class="hover:text-gray-400">Home</a>
-            <a href="about.html" class="hover:text-gray-400">About</a>
-            <a href="work.html" class="hover:text-gray-400">Projects</a>
-            <a href="contact.html" class="hover:text-gray-400">Contact</a>
+            <a href="index.html" class="hover:text-gray-500">Home</a>
+            <a href="about.html" class="hover:text-gray-500">About</a>
+            <a href="work.html" class="hover:text-gray-500">Projects</a>
+            <a href="contact.html" class="hover:text-gray-500">Contact</a>
         </nav>
     </header>
 
@@ -84,8 +84,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-6 bg-gray-800 text-center">
-        <p class="text-gray-400">&copy; 2024 Ezequiel Quintero. All rights reserved.</p>
+    <footer class="py-6 bg-gray-200 text-center">
+        <p class="text-black">&copy; 2024 Ezequiel Quintero. All rights reserved.</p>
     </footer>
 
 </body>
